@@ -12,7 +12,7 @@ function tokenAuth (req, res, next){
 
     //Authenticating token
     jwt.verify(token, secret, function(err, decoded) {
-      if (err) return res.status(500).send({ auth: false, error: 'Token is not valid.'});
+      if (err) return res.status(498).send({ auth: false, error: 'Token is not valid.'});
       
       //Passing token variables
       req.userId = decoded.id;
